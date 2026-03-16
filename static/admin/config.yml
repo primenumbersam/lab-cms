@@ -27,9 +27,8 @@ collections:
     extension: "md"
     format: "frontmatter"
     create: true
-    nested: true
-    # This filter ensures we only see items with 'type: docs' 
-    # (Books and Chapters have this, Root _index does not)
+    nested:
+      depth: 3 # Changed from 'true' to an object with depth
     filter: {field: "type", value: "docs"}
     path: "{{dirname}}/{{slug}}"
     fields:
