@@ -5,8 +5,8 @@
 [build.environment]
   HUGO_VERSION = "0.151.0"
 
-[[plugins]]
-  package = "netlify-plugin-hugo-cache-handler"
+
+# Redirects for Decap CMS
 
 [[redirects]]
   from = "/admin/*"
