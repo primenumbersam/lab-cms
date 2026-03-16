@@ -8,12 +8,23 @@ media_folder: "static/images"
 public_folder: "/images"
 
 collections:
+  - name: "pages"
+    label: "Main Pages"
+    files:
+      - label: "Home Page"
+        name: "index"
+        file: "content/_index.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
   - name: "books"
-    label: "Books (Intro Pages)"
+    label: "Books (Sections)"
     folder: "content"
     # Matches content/book-*/_index.md
     path: "{{slug}}/_index"
-    filter: {field: "title", value: "Book"} # Optional filter to avoid root _index.md
+    filter: {field: "type", value: "docs"}
     extension: "md"
     format: "frontmatter"
     create: true
@@ -24,7 +35,7 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "chapters"
-    label: "Chapters (Content Pages)"
+    label: "Chapters (Articles)"
     folder: "content"
     # Matches content/book-*/chapter-*.md
     path: "{{dirname}}/{{slug}}"
