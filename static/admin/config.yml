@@ -2,6 +2,9 @@ backend:
   name: git-gateway
   branch: main
 
+# 로컬 개발을 위한 설정 (Proxy Server 사용 시)
+local_backend: true
+
 publish_mode: editorial_workflow
 
 media_folder: "static/images"
