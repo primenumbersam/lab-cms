@@ -13,7 +13,7 @@ npm install
 ```
 
 ### 2. Netlify 배포
-1. [Netlify](https://www.netlify.com/)에 로그인하고 **'Add new site' > 'Import an existing project'**를 선택합니다.
+1. [Netlify](https://www.netlify.com/)에 로그인하고 'Add new site' > 'Import an existing project'를 선택합니다.
 2. 사용자의 GitHub 저장소를 연결합니다.
 3. 빌드 설정은 자동으로 감지됩니다 (`netlify.toml` 참조).
 
